@@ -1,0 +1,6 @@
+Tema: 123
+Nota: 7.5
+Predata in saptamana: 13
+Deadline: 12
+Feedback: bravo da gg
+

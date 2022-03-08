@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="validation.StudentValidatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-08T11:48:57" hostname="Octavians-Air.cs.ubbcluj.ro" time="0.031">
+  <properties/>
+  <testcase name="testStudentValidator_InvalidGroup_ShouldThrowError()" classname="validation.StudentValidatorTest" time="0.026"/>
+  <testcase name="testStudentValidator_ValidGroup_ShouldSucceed()" classname="validation.StudentValidatorTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
