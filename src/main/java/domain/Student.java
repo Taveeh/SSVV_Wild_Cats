@@ -6,11 +6,21 @@ public class Student implements HasID<String> {
     private String idStudent;
     private String nume;
     private int grupa;
+    private String email = "";
+    private String teacher = "";
 
     public Student(String idStudent, String nume, int grupa) {
         this.idStudent = idStudent;
         this.nume = nume;
         this.grupa = grupa;
+    }
+
+    public Student(String idStudent, String nume, int grupa, String email, String teacher) {
+        this.idStudent = idStudent;
+        this.nume = nume;
+        this.grupa = grupa;
+        this.email = email;
+        this.teacher = teacher;
     }
 
     @Override

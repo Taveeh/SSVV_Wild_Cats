@@ -6,6 +6,7 @@ public class StudentValidator implements Validator<Student> {
         if (student.getID() == null || student.getID().equals("")) {
             throw new ValidationException("ID invalid! \n");
         }
+
         if (student.getNume() == null || student.getNume().equals("")) {
             throw new ValidationException("Nume invalid! \n");
         }
