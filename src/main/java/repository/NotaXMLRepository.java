@@ -59,7 +59,7 @@ public class NotaXMLRepository extends AbstractXMLRepository<Pair<String, String
         StudentXMLRepository srepo = new StudentXMLRepository(sval, "studenti.xml");
         TemaXMLRepository trepo = new TemaXMLRepository(tval, "teme.xml");
 
-        Student student = srepo.findOne(idStudent);
+        Student student = srepo.findOne(Integer.parseInt(idStudent));
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(student.getNume() + ".txt", false))) {
             super.findAll().forEach(nota -> {
                 if (nota.getID().getObject1().equals(idStudent)) {

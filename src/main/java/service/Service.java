@@ -24,7 +24,7 @@ public class Service {
 
     public Iterable<Nota> findAllNote() { return notaXmlRepo.findAll(); }
 
-    public int saveStudent(String id, String nume, int grupa) {
+    public int saveStudent(Integer id, String nume, int grupa) {
         Student student = new Student(id, nume, grupa);
         Student result = studentXmlRepo.save(student);
 
@@ -44,7 +44,7 @@ public class Service {
         return 0;
     }
 
-    public int saveNota(String idStudent, String idTema, double valNota, int predata, String feedback) {
+    public int saveNota(Integer idStudent, String idTema, double valNota, int predata, String feedback) {
         if (studentXmlRepo.findOne(idStudent) == null || temaXmlRepo.findOne(idTema) == null) {
             return -1;
         }
@@ -66,7 +66,7 @@ public class Service {
         }
     }
 
-    public int deleteStudent(String id) {
+    public int deleteStudent(Integer id) {
         Student result = studentXmlRepo.delete(id);
 
         if (result == null) {
@@ -84,7 +84,7 @@ public class Service {
         return 1;
     }
 
-    public int updateStudent(String id, String numeNou, int grupaNoua) {
+    public int updateStudent(Integer id, String numeNou, int grupaNoua) {
         Student studentNou = new Student(id, numeNou, grupaNoua);
         Student result = studentXmlRepo.update(studentNou);
 

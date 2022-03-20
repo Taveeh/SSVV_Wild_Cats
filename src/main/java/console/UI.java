@@ -53,7 +53,7 @@ public class UI {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Introduceti ID-ul studentului: ");
-        String id = scanner.nextLine();
+        Integer id = scanner.nextInt();
 
         System.out.println("Introduceti numele studentului: ");
         String nume = scanner.nextLine();
@@ -96,7 +96,7 @@ public class UI {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Introduceti ID-ul studentului: ");
-        String idStudent = scanner.nextLine();
+        Integer idStudent = scanner.nextInt();
 
         System.out.println("Introduceti ID-ul temei: ");
         String idTema = scanner.nextLine();
@@ -114,7 +114,7 @@ public class UI {
 
         int result = service.saveNota(idStudent, idTema, valNota, predata, feedback);
         if (result == 1) {
-            service.createStudentFile(idStudent, idTema);
+            service.createStudentFile(idStudent.toString(), idTema);
             System.out.println("Nota adaugata cu succes! \n");
         }
         else if (result == 0) {
@@ -129,7 +129,8 @@ public class UI {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Introduceti ID-ul studentului: ");
-        String id = scanner.nextLine();
+        Integer id = scanner.nextInt();
+
 
         if (service.deleteStudent(id) != 0) {
             System.out.println("Student sters cu succes! \n");
@@ -157,7 +158,8 @@ public class UI {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Introduceti ID-ul studentului: ");
-        String id = scanner.nextLine();
+        Integer id = scanner.nextInt();
+
 
         System.out.println("Introduceti noul nume al studentului: ");
         String numeNou = scanner.nextLine();

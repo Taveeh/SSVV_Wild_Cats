@@ -2,20 +2,20 @@ package domain;
 
 import java.util.Objects;
 
-public class Student implements HasID<String> {
-    private String idStudent;
+public class Student implements HasID<Integer> {
+    private Integer idStudent;
     private String nume;
     private int grupa;
     private String email = "";
     private String teacher = "";
 
-    public Student(String idStudent, String nume, int grupa) {
+    public Student(Integer idStudent, String nume, int grupa) {
         this.idStudent = idStudent;
         this.nume = nume;
         this.grupa = grupa;
     }
 
-    public Student(String idStudent, String nume, int grupa, String email, String teacher) {
+    public Student(Integer idStudent, String nume, int grupa, String email, String teacher) {
         this.idStudent = idStudent;
         this.nume = nume;
         this.grupa = grupa;
@@ -24,10 +24,10 @@ public class Student implements HasID<String> {
     }
 
     @Override
-    public String getID() { return idStudent; }
+    public Integer getID() { return idStudent; }
 
     @Override
-    public void setID(String idStudent) { this.idStudent = idStudent; }
+    public void setID(Integer idStudent) { this.idStudent = idStudent; }
 
     public String getNume() {
         return nume;
@@ -43,6 +43,22 @@ public class Student implements HasID<String> {
 
     public void setGrupa(int grupa) {
         this.grupa = grupa;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
     }
 
     @Override
