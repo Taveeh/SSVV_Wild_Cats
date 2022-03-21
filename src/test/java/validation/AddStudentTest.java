@@ -13,7 +13,7 @@ public class AddStudentTest {
 
     @Test
     void testValidEntity_shouldWork() {
-        var student = new Student(1, "George", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "George", 932, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -22,14 +22,14 @@ public class AddStudentTest {
 
     @Test
     void testInvalidNameLengthMin_shouldThrowError() {
-        var student = new Student(1, "a", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "a", 932, "george@ubbcluj.ro", "Marcel");
 
         assertThrows(Exception.class, () -> studentRepository.save(student));
     }
 
     @Test
     void testInvalidNameLengthMax_shouldThrowError() {
-        var student = new Student(
+        Student student = new Student(
                 1,
                 new String(new char[101]).replace('\0', 'a'),
                 932,
@@ -42,21 +42,21 @@ public class AddStudentTest {
 
     @Test
     void testInvalidTeacherLengthMin_shouldThrowError() {
-        var student = new Student(1, "George", 932, "george@ubbcluj.ro", "a");
+        Student student = new Student(1, "George", 932, "george@ubbcluj.ro", "a");
 
         assertThrows(Exception.class, () -> studentRepository.save(student));
     }
 
     @Test
     void testInvalidTeacherLengthMax_shouldThrowError() {
-        var student = new Student(1, "George", 932, "george@ubbcluj.ro", new String(new char[101]).replace('\0', 'a'));
+        Student student = new Student(1, "George", 932, "george@ubbcluj.ro", new String(new char[101]).replace('\0', 'a'));
 
         assertThrows(Exception.class, () -> studentRepository.save(student));
     }
 
     @Test
     void testDuplicateEntity_shouldThrowError() {
-        var student = new Student(1, "George", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "George", 932, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -65,21 +65,21 @@ public class AddStudentTest {
 
     @Test
     void testInvalidEmail_shouldThrowError() {
-        var student = new Student(1, "George", 932, "george", "Marcel");
+        Student student = new Student(1, "George", 932, "george", "Marcel");
 
         assertThrows(Exception.class, () -> studentRepository.save(student));
     }
 
     @Test
     void testId0() {
-        var student = new Student(0, "George", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(0, "George", 932, "george@ubbcluj.ro", "Marcel");
 
         assertThrows(Exception.class, () -> studentRepository.save(student));
     }
 
     @Test
     void testId2() {
-        var student = new Student(2, "George", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(2, "George", 932, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -88,7 +88,7 @@ public class AddStudentTest {
 
     @Test
     void testIdMaxMinus1() {
-        var student = new Student(Integer.MAX_VALUE - 1, "George", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(Integer.MAX_VALUE - 1, "George", 932, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -97,7 +97,7 @@ public class AddStudentTest {
 
     @Test
     void testIdMax() {
-        var student = new Student(Integer.MAX_VALUE, "George", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(Integer.MAX_VALUE, "George", 932, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -106,14 +106,14 @@ public class AddStudentTest {
 
     @Test
     void testIdMaxPlusOne() {
-        var student = new Student(Integer.MAX_VALUE + 1, "George", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(Integer.MAX_VALUE + 1, "George", 932, "george@ubbcluj.ro", "Marcel");
 
         assertThrows(Exception.class, () -> studentRepository.save(student));
     }
 
     @Test
     void testNameAb() {
-        var student = new Student(1, "ab", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "ab", 932, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -122,7 +122,7 @@ public class AddStudentTest {
 
     @Test
     void testNameAbc() {
-        var student = new Student(1, "abc", 932, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "abc", 932, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -131,7 +131,7 @@ public class AddStudentTest {
 
     @Test
     void testNameA99() {
-        var student = new Student(
+        Student student = new Student(
                 1,
                 new String(new char[99]).replace('\0', 'a'),
                 932,
@@ -146,7 +146,7 @@ public class AddStudentTest {
 
     @Test
     void testName100() {
-        var student = new Student(
+        Student student = new Student(
                 1,
                 new String(new char[100]).replace('\0', 'a'),
                 932,
@@ -161,7 +161,7 @@ public class AddStudentTest {
 
     @Test
     void testTeacherAb() {
-        var student = new Student(1, "George", 932, "george@ubbcluj.ro", "ab");
+        Student student = new Student(1, "George", 932, "george@ubbcluj.ro", "ab");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -170,7 +170,7 @@ public class AddStudentTest {
 
     @Test
     void testTeacherAbc() {
-        var student = new Student(1, "George", 932, "george@ubbcluj.ro", "abc");
+        Student student = new Student(1, "George", 932, "george@ubbcluj.ro", "abc");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -179,7 +179,7 @@ public class AddStudentTest {
 
     @Test
     void testTeacherA99() {
-        var student = new Student(
+        Student student = new Student(
                 1,
                 "George",
                 932,
@@ -194,7 +194,7 @@ public class AddStudentTest {
 
     @Test
     void testTeacher100() {
-        var student = new Student(
+        Student student = new Student(
                 1,
                 "George",
                 932,
@@ -210,14 +210,14 @@ public class AddStudentTest {
 
     @Test
     void testGroup0() {
-        var student = new Student(1, "George", 0, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "George", 0, "george@ubbcluj.ro", "Marcel");
 
         assertThrows(ValidationException.class, () -> studentRepository.save(student));
     }
 
     @Test
     void testGroup1() {
-        var student = new Student(1, "George", 1, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "George", 1, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -226,7 +226,7 @@ public class AddStudentTest {
 
     @Test
     void testGroup2() {
-        var student = new Student(1, "George", 2, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "George", 2, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -235,7 +235,7 @@ public class AddStudentTest {
 
     @Test
     void testGroupMaxMinus1() {
-        var student = new Student(1, "George", Integer.MAX_VALUE - 1, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "George", Integer.MAX_VALUE - 1, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -244,7 +244,7 @@ public class AddStudentTest {
 
     @Test
     void testGroupMax() {
-        var student = new Student(1, "George", Integer.MAX_VALUE, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "George", Integer.MAX_VALUE, "george@ubbcluj.ro", "Marcel");
 
         assertDoesNotThrow(() -> studentRepository.save(student));
 
@@ -253,7 +253,7 @@ public class AddStudentTest {
 
     @Test
     void testGroupMaxPlus1() {
-        var student = new Student(1, "George", Integer.MAX_VALUE + 1, "george@ubbcluj.ro", "Marcel");
+        Student student = new Student(1, "George", Integer.MAX_VALUE + 1, "george@ubbcluj.ro", "Marcel");
 
         assertThrows(ValidationException.class, () -> studentRepository.save(student));
     }
