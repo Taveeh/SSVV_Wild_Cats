@@ -1,10 +1,8 @@
 package validation;
 
 import domain.Student;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import repository.StudentRepository;
-import repository.StudentXMLRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
