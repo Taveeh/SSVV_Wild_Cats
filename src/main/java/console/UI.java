@@ -84,7 +84,9 @@ public class UI {
         System.out.println("Introduceti saptamana startline a temei: ");
         int startline = scanner.nextInt();
 
-        if (service.saveTema(id, descriere, deadline, startline) != 0) {
+        int result = service.saveTema(id, descriere, deadline, startline);
+
+        if (result == 0) {
             System.out.println("Tema adaugata cu succes! \n");
         }
         else {
