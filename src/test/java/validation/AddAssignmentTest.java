@@ -10,7 +10,7 @@ public class AddAssignmentTest {
     private TemaRepository temaRepository = new TemaRepository(new TemaValidator());
 
     @Test
-    void tc1_TestValidAssignment_ShouldWork() {
+    void testcase1_TestValidAssignment_ShouldWork() {
         Tema tema = new Tema("1", "test", 12, 10);
 
         assertDoesNotThrow(() ->  temaRepository.save(tema));
@@ -18,7 +18,7 @@ public class AddAssignmentTest {
     }
 
     @Test
-    void tc2_TestInvalidAssignment_NullId_ShouldThrowError() {
+    void testcase2_TestInvalidAssignment_NullId_ShouldThrowError() {
         Tema tema = new Tema(null, "test", 12, 10);
 
         assertThrows(ValidationException.class, () ->  temaRepository.save(tema));
