@@ -85,8 +85,52 @@ public class ApplicationTest {
 
     @Test
     void testAllAtOnce() {
-        testAddStudent();
-        testAddAssignment();
-        testAddGrade();
+        Student student = new Student(1, "George", 932, "george@ubbcluj.ro", "Marcel");
+        Tema tema = new Tema("1", "test", 12, 10);
+        Nota grade = new Nota(new Pair<>("1", "1"), 9.5, 11, "Almost perfect, great job");
+
+        assertDoesNotThrow(() -> studentRepository.save(student));
+        assertDoesNotThrow(() -> temaRepository.save(tema));
+        assertDoesNotThrow(() -> notaRepository.save(grade));
+
+        List<Student> studentList = StreamSupport
+                .stream(
+                        studentRepository
+                                .findAll()
+                                .spliterator(),
+                        false
+                ).collect(
+                        Collectors.toList()
+                );
+
+
+
+        List<Tema> assignmentList = StreamSupport
+                .stream(
+                        temaRepository
+                                .findAll()
+                                .spliterator(),
+                        false
+                ).collect(
+                        Collectors.toList()
+                );
+
+
+
+        List<Nota> gradesList = StreamSupport
+                .stream(
+                        notaRepository
+                                .findAll()
+                                .spliterator(),
+                        false
+                ).collect(
+                        Collectors.toList()
+                );
+
+        assertEquals(1, studentList.size());
+        assertEquals(1, assignmentList.size());
+        assertEquals(1, gradesList.size());
     }
+
+
 }
