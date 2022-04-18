@@ -106,6 +106,7 @@ public class UI {
 
         System.out.println("Introduceti ID-ul studentului: ");
         Integer idStudent = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Introduceti ID-ul temei: ");
         String idTema = scanner.nextLine();

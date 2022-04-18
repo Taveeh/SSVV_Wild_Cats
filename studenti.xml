@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entitati>
+<student ID="1">
+<Nume>Marian</Nume>
+<Grupa>932</Grupa>
+<Teacher>Octavian</Teacher>
+<Email>marian@gmail.com</Email>
+</student>
 <student ID="23">
 <Nume>Marcel</Nume>
 <Grupa>932</Grupa>

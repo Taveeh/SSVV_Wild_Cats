@@ -32,7 +32,7 @@ public class NotaXMLRepository extends AbstractXMLRepository<Pair<String, String
 
     protected Element getElementFromEntity(Nota nota, Document XMLdocument) {
         Element element = XMLdocument.createElement("nota");
-        element.setAttribute("IDStudent", nota.getID().getObject1());
+        element.setAttribute("IDStudent", String.valueOf(nota.getID().getObject1()));
         element.setAttribute("IDTema", nota.getID().getObject2());
 
         element.appendChild(createElement(XMLdocument, "Nota", String.valueOf(nota.getNota())));
