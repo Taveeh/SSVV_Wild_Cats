@@ -54,14 +54,21 @@ public class UI {
 
         System.out.println("Introduceti ID-ul studentului: ");
         Integer id = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Introduceti numele studentului: ");
         String nume = scanner.nextLine();
 
         System.out.println("Introduceti grupa studentului: ");
         int grupa = scanner.nextInt();
+        scanner.nextLine();
 
-        if (service.saveStudent(id, nume, grupa) != 0) {
+        System.out.println("Introduceti emailul studentului: ");
+        String email = scanner.nextLine();
+
+        System.out.println("Introduceti profesorul studentului: ");
+        String teacher = scanner.nextLine();
+        if (service.saveStudent(id, nume, grupa, email, teacher) != 0) {
             System.out.println("Student adaugat cu succes! \n");
         }
         else {

@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Studenti>
-    <student ID="1">
-        <Nume>Ana</Nume>
-        <Grupa>221</Grupa>
-        <Teacher>Octavian</Teacher>
-        <Email>ana@csubbcluj.ro</Email>
-    </student>
-    <student ID="2">
-        <Nume>Maria</Nume>
-        <Grupa>222</Grupa>
-        <Teacher>Octavian</Teacher>
-        <Email>maria@csubbcluj.ro</Email>
-    </student>
-    <student ID="4">
-        <Nume>Ion</Nume>
-        <Grupa>227</Grupa>
-        <Teacher>Octavian</Teacher>
-        <Email>ion@csubbcluj.ro</Email>
-    </student>
-</Studenti>
+<Entitati>
+<student ID="1">
+<Nume>Ana</Nume>
+<Grupa>221</Grupa>
+</student>
+<student ID="2">
+<Nume>Maria</Nume>
+<Grupa>222</Grupa>
+</student>
+<student ID="4">
+<Nume>Ion</Nume>
+<Grupa>227</Grupa>
+</student>
+<student ID="23">
+<Nume>Marcel</Nume>
+<Grupa>932</Grupa>
+</student>
+</Entitati>
