@@ -17,7 +17,8 @@ public class StudentXMLRepository extends AbstractXMLRepository<Integer, Student
 
         element.appendChild(createElement(XMLdocument, "Nume", student.getNume()));
         element.appendChild(createElement(XMLdocument, "Grupa", String.valueOf(student.getGrupa())));
-
+        element.appendChild(createElement(XMLdocument, "Teacher", student.getTeacher()));
+        element.appendChild(createElement(XMLdocument, "Email", student.getEmail()));
         return element;
     }
 
