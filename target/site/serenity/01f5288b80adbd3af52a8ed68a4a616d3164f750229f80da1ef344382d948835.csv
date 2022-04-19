@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Search by keyword story ddt","Search wiki by keyword test DDT","SUCCESS","2022-04-17T22:25:43.848+03:00[Europe/Athens]","0.0","9.6"
+"Search by keyword story","Searching by keyword banana should display the corresponding article","SUCCESS","2022-04-19T13:22:30.415+03:00[Europe/Bucharest]","0.0","17.47"
+"Search by keyword story","Searching by keyword apple should display the corresponding article","SUCCESS","2022-04-19T13:22:48.222+03:00[Europe/Bucharest]","0.0","6.22"
