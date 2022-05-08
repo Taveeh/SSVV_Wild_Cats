@@ -38,7 +38,19 @@ public class SearchByKeywordStory {
         anna.should_see_definition("An edible fruit produced by the pear tree, similar to an apple but typically elongated towards the stem");
     }
 
-    @Pending @Test
-    public void searching_by_ambiguious_keyword_should_display_the_disambiguation_page() {
+    @Test
+    public void searching_by_keyword_student_should_display_definition() {
+        anna.is_the_home_page();
+        anna.looks_for("student");
+        anna.should_see_definition("A person who studies or learns about a particular subject");
     }
+
+    @Test
+    public void searching_by_keyword_hitler_should_contain_image() {
+        anna.is_the_home_page();
+        anna.looks_for("dismal");
+        anna.should_see_definition("Disastrous");
+        anna.should_see_definition("calamitous");
+    }
+
 } 

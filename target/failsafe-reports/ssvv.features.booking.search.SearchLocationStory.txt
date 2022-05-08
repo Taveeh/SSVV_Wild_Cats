@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: ssvv.features.booking.search.SearchLocationStory
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 96.83 s <<< FAILURE! - in ssvv.features.booking.search.SearchLocationStory
+ssvv.features.booking.search.SearchLocationStory.searchLocation[1]  Time elapsed: 30.922 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: a collection containing a string containing "ceva"
+     but: was "c&c residence hotel
+opens in new window", was "new 33
+opens in new window", was "pensiunea hanami
+opens in new window", was "sport residence
+opens in new window", was "apartament in regim hotelier
+opens in new window", was "apartament b orizont
+opens in new window", was "abs24 apartments, conditii de 5 stele!
+opens in new window", was "cozy apartments
+opens in new window", was "garsoniera riviera
+opens in new window", was "vila royal
+opens in new window", was "exclusive apartments bacău
+opens in new window", was "garsoniera centru
+opens in new window", was "hotel dumbrava
+opens in new window", was "pension daciana
+opens in new window", was "caprice complex
+opens in new window", was "pensiunea studio
+opens in new window", was "hotel bistrita
+opens in new window", was "downtown "rendez-vous" luxury
+opens in new window", was "park residence
+opens in new window", was "central
+opens in new window", was "garsoniera ultracentral
+opens in new window", was "apartment river
+opens in new window", was "hamlet hotel
+opens in new window", was "apartament ultra central style
+opens in new window", was "topaz central apartment
+opens in new window"
+	at ssvv.features.booking.search.SearchLocationStory.searchLocation(SearchLocationStory.java:85)
+

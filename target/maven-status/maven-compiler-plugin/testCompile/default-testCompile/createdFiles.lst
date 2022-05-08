@@ -1,0 +1,9 @@
+ssvv/features/booking/filter/FilterLocationStory.class
+ssvv/features/search/package-info.class
+ssvv/pages/DictionaryPage.class
+ssvv/features/search/SearchByKeywordStoryDdt.class
+ssvv/features/search/SearchByKeywordStory.class
+ssvv/pages/BookingPage.class
+ssvv/steps/serenity/EndUserSteps.class
+ssvv/steps/serenity/BookingUserSteps.class
+ssvv/features/booking/search/SearchLocationStory.class

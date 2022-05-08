@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="ssvv.features.booking.search.SearchLocationStory" skipped="0" tests="4" time="92.64" timestamp="2022-05-08 08:41:23"><testcase classname="ssvv.features.booking.search.SearchLocationStory" name="Search location"><failure message="&#10;Expected: a collection containing a string containing &quot;ceva&quot;&#10;     but: was &quot;c&amp;c residence hotel&#10;opens in new window&quot;, was &quot;new 33&#10;opens in new window&quot;, was &quot;pensiunea hanami&#10;opens in new window&quot;, was &quot;sport residence&#10;opens in new window&quot;, was &quot;apartament in regim hotelier&#10;opens in new window&quot;, was &quot;apartament b orizont&#10;opens in new window&quot;, was &quot;abs24 apartments, conditii de 5 stele!&#10;opens in new window&quot;, was &quot;cozy apartments&#10;opens in new window&quot;, was &quot;garsoniera riviera&#10;opens in new window&quot;, was &quot;vila royal&#10;opens in new window&quot;, was &quot;exclusive apartments bacău&#10;opens in new window&quot;, was &quot;garsoniera centru&#10;opens in new window&quot;, was &quot;hotel dumbrava&#10;opens in new window&quot;, was &quot;pension daciana&#10;opens in new window&quot;, was &quot;caprice complex&#10;opens in new window&quot;, was &quot;pensiunea studio&#10;opens in new window&quot;, was &quot;hotel bistrita&#10;opens in new window&quot;, was &quot;downtown &quot;rendez-vous&quot; luxury&#10;opens in new window&quot;, was &quot;park residence&#10;opens in new window&quot;, was &quot;central&#10;opens in new window&quot;, was &quot;garsoniera ultracentral&#10;opens in new window&quot;, was &quot;apartment river&#10;opens in new window&quot;, was &quot;hamlet hotel&#10;opens in new window&quot;, was &quot;apartament ultra central style&#10;opens in new window&quot;, was &quot;topaz central apartment&#10;opens in new window&quot;" type="java.lang.AssertionError">
+Expected: a collection containing a string containing "ceva"
+     but: was "c&amp;c residence hotel
+opens in new window", was "new 33
+opens in new window", was "pensiunea hanami
+opens in new window", was "sport residence
+opens in new window", was "apartament in regim hotelier
+opens in new window", was "apartament b orizont
+opens in new window", was "abs24 apartments, conditii de 5 stele!
+opens in new window", was "cozy apartments
+opens in new window", was "garsoniera riviera
+opens in new window", was "vila royal
+opens in new window", was "exclusive apartments bacău
+opens in new window", was "garsoniera centru
+opens in new window", was "hotel dumbrava
+opens in new window", was "pension daciana
+opens in new window", was "caprice complex
+opens in new window", was "pensiunea studio
+opens in new window", was "hotel bistrita
+opens in new window", was "downtown "rendez-vous" luxury
+opens in new window", was "park residence
+opens in new window", was "central
+opens in new window", was "garsoniera ultracentral
+opens in new window", was "apartment river
+opens in new window", was "hamlet hotel
+opens in new window", was "apartament ultra central style
+opens in new window", was "topaz central apartment
+opens in new window"</failure><system-err>
+Expected: a collection containing a string containing "ceva"
+     but: was "c&amp;c residence hotel
+opens in new window", was "new 33
+opens in new window", was "pensiunea hanami
+opens in new window", was "sport residence
+opens in new window", was "apartament in regim hotelier
+opens in new window", was "apartament b orizont
+opens in new window", was "abs24 apartments, conditii de 5 stele!
+opens in new window", was "cozy apartments
+opens in new window", was "garsoniera riviera
+opens in new window", was "vila royal
+opens in new window", was "exclusive apartments bacău
+opens in new window", was "garsoniera centru
+opens in new window", was "hotel dumbrava
+opens in new window", was "pension daciana
+opens in new window", was "caprice complex
+opens in new window", was "pensiunea studio
+opens in new window", was "hotel bistrita
+opens in new window", was "downtown "rendez-vous" luxury
+opens in new window", was "park residence
+opens in new window", was "central
+opens in new window", was "garsoniera ultracentral
+opens in new window", was "apartment river
+opens in new window", was "hamlet hotel
+opens in new window", was "apartament ultra central style
+opens in new window", was "topaz central apartment
+opens in new window"
+ssvv.steps.serenity.BookingUserSteps.shouldExistOnPage(BookingUserSteps.java:34)
+ssvv.features.booking.search.SearchLocationStory.searchLocation(SearchLocationStory.java:85)
+</system-err></testcase><testcase classname="ssvv.features.booking.search.SearchLocationStory" name="Search location count"/></testsuite>
